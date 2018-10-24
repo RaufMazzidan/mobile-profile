@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
 
 import id.sch.smktelkom.xiirpl1_01.appprofile.R
 
@@ -23,8 +25,22 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+//        return inflater.inflate(R.layout.fragment_home, container, false)
+        val step = arguments?.getInt("step")
+        return when (step) {
+            1 -> inflater.inflate(R.layout.fragment_home, container, false)
+            2 -> inflater.inflate(R.layout.fragment_biodata, container, false)
+            else -> inflater.inflate(R.layout.fragment_biodata2, container, false)
+        }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        view.findViewById<Button>(R.id.btn_next_bio)?.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.next_action, null)
+        )
+
+
+    }
 }
