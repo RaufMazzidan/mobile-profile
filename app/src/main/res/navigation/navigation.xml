@@ -19,11 +19,10 @@
         <action
             android:id="@+id/next_action"
             app:destination="@+id/biodataFragment"
-            app:enterAnim="@anim/slide_in_right" />
-        <!--app:exitAnim="@anim/slide_out_left"-->
-        <!--app:popEnterAnim="@anim/slide_in_left"-->
-        <!--app:popExitAnim="@anim/slide_out_right"-->
-        <!--/>-->
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/biodataFragment"
@@ -39,11 +38,10 @@
         <action
             android:id="@+id/next_action"
             app:destination="@+id/biodata2Fragment"
-            app:enterAnim="@anim/slide_in_right" />
-        <!--app:exitAnim="@anim/slide_out_left"-->
-        <!--app:popEnterAnim="@anim/slide_in_left"-->
-        <!--app:popExitAnim="@anim/slide_out_right"-->
-        <!--/>-->
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/biodata2Fragment"
@@ -59,20 +57,19 @@
         <action
             android:id="@+id/next_action"
             app:destination="@+id/homeFragment"
-            app:enterAnim="@anim/slide_in_right" />
-        <!--app:exitAnim="@anim/slide_out_left"-->
-        <!--app:popEnterAnim="@anim/slide_in_left"-->
-        <!--app:popExitAnim="@anim/slide_out_right"-->
-        <!--/>-->
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/educationFragment"
         android:name="id.sch.smktelkom.xiirpl1_01.appprofile.fragment.EducationFragment"
         android:label="fragment_education"
         tools:layout="@layout/fragment_education" />
-    <!--<fragment-->
-    <!--android:id="@+id/homeFragment"-->
-    <!--android:name="id.sch.smktelkom.xiirpl1_01.appprofile.fragment.HomeFragment"-->
-    <!--android:label="fragment_home"-->
-    <!--tools:layout="@layout/fragment_home" />-->
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="id.sch.smktelkom.xiirpl1_01.appprofile.fragment.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
 </navigation>
