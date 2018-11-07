@@ -35,4 +35,5 @@ dependencies {
     implementation 'android.arch.navigation:navigation-fragment:' + rootProject.navigationVersion
     implementation 'android.arch.navigation:navigation-ui:' + rootProject.navigationVersion
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:cardview-v7:27.1.1'
 }

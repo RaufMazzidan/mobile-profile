@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bio_navigation"
+    app:startDestination="@id/fragment_bio">
+
+    <fragment
+        android:id="@+id/fragment_bio"
+        android:name="id.sch.smktelkom.xiirpl1_01.appprofile.fragment.BioFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_bio">
+
+        <action
+            android:id="@+id/next_action"
+            app:destination="@+id/bio2Activity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <activity
+        android:id="@+id/bio2Activity"
+        android:name="id.sch.smktelkom.xiirpl1_01.appprofile.Bio2Activity"
+        android:label="activity_bio2"
+        tools:layout="@layout/activity_bio2" />
+
+
+</navigation>

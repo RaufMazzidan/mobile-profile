@@ -1,51 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorWhite"
     tools:context=".fragment.HomeFragment">
 
-    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/profil"
-        app:civ_border_color="@color/colorPrimary"
-        app:civ_border_width="3dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="ABD. RAUF JAUHARI IZZA MAZZIDAN"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+                <!--<ImageView-->
+                <!--android:layout_marginTop="45dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:src="@drawable/photocercle"/>-->
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/profil"
+                    app:civ_border_color="@color/colorWhite"
+                    app:civ_border_width="3dp" />
 
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:text="          Perkenalkan nama saya Rauf, saya adalah web developer yang mempunyai rasa ingin tahu yang tinggi, dan saya juga seorang yang mudah bergaul dengan orang lain oleh karena itu, saya dapat mudah bekerja secara tim."
-        android:textColor="@android:color/black"
-        android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="ABD. RAUF JAUHARI IZZA MAZZIDAN"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
+            </LinearLayout>
 
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="     Perkenalkan nama saya Rauf, saya adalah web developer yang mempunyai rasa ingin tahu yang tinggi, dan saya juga seorang yang mudah bergaul dengan orang lain oleh karena itu, saya dapat mudah bekerja secara tim."
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/gradient_bg"></LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/btn_next_bio"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="100dp"
-        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="MY BIO" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_round"
+        android:text="Next"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
 
-
-</LinearLayout>
+</RelativeLayout>
