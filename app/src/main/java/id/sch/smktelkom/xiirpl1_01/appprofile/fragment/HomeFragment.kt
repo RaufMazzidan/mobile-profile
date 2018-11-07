@@ -29,8 +29,7 @@ class HomeFragment : Fragment() {
         val step = arguments?.getInt("step")
         return when (step) {
             1 -> inflater.inflate(R.layout.fragment_home, container, false)
-            2 -> inflater.inflate(R.layout.fragment_biodata, container, false)
-            else -> inflater.inflate(R.layout.fragment_biodata2, container, false)
+            else -> inflater.inflate(R.layout.fragment_bio, container, false)
         }
     }
 
