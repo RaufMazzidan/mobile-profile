@@ -26,20 +26,21 @@ class HomeFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_home, container, false)
-        val step = arguments?.getInt("step")
-        return when (step) {
-            1 -> inflater.inflate(R.layout.fragment_home, container, false)
-            else -> inflater.inflate(R.layout.fragment_bio, container, false)
-        }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
         view.findViewById<Button>(R.id.btn_next_bio)?.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.next_action, null)
         )
-
-
+        return view
     }
+
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        view.findViewById<Button>(R.id.btn_next_bio)?.setOnClickListener(
+//                Navigation.createNavigateOnClickListener(R.id.next_action, null)
+//        )
+//
+//
+//    }
 }
